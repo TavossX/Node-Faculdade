@@ -1,0 +1,21 @@
+{
+  "name": "node-faculdade",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TavossX/Node-Faculdade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TavossX/Node-Faculdade/issues"
+  },
+  "homepage": "https://github.com/TavossX/Node-Faculdade#readme",
+  "description": ""
+}
