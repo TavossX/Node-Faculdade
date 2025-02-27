@@ -1,15 +1,21 @@
+//1//
 import express from "express";
 import cors from "cors";
-import routes from "./rotas/Users/routes";
-const app = new express();
+//11//
+import routes from "./Routers/User/routes.js";
+////
+const app = express();
 //mensagem json
 app.use(express.json());
-//cors front-end
+//cors (front-end)
 app.use(
   cors({
-    credentials: true,
+    ceredentials: true,
     origin: "http://localhost:3000",
   })
 );
-app.use();
+//10//
+app.use("/users", routes);
+////
 app.listen(5000);
+////
