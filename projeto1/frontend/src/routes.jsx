@@ -1,15 +1,15 @@
 import {
   BrowserRouter as Router,
   Route,
-  ROutes,
+  Routes,
   BrowserRouter,
 } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Container from "./components/Container";
+import Home from "./pages/Home/index.jsx";
+import Login from "./pages/Login/index.jsx";
+import Register from "./pages/Register/index.jsx";
+import Header from "./components/Header/index.jsx";
+import Footer from "./components/Footer/index.jsx";
+import Container from "./components/Container/index.jsx";
 
 function AppRoutes() {
   return (
