@@ -2,7 +2,7 @@ import AppRoutes from "./routes.jsx";
 function App() {
   return (
     <div className="App">
-      <AppRoutes />
+      <AppRoutes/>
     </div>
   );
 }

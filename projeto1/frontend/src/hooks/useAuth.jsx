@@ -1,4 +1,4 @@
-import api from "../utils/api.jsx";
+import api from "../Utils/api.jsx";
 export default function userAuth() {
   async function register(user) {
     try {
@@ -7,8 +7,8 @@ export default function userAuth() {
       });
       console.log(data);
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
-  }
+  } //function
   return { register };
-}
+} //export
