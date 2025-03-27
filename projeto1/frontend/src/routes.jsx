@@ -6,21 +6,23 @@ import Header from "./Component/Header/index.jsx";
 import Footer from "./Component/Footer/index.jsx";
 import Container from "./Component/Container/index.jsx";
 import { UserProvider } from "./Context/UserContext.jsx";
+import Message from "./Component/Message/index.jsx";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
-      <Header />
-      <Container>
-        <UserProvider>
+      <UserProvider>
+        <Header />
+        <Message />
+        <Container>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
-        </UserProvider>
-      </Container>
-      <Footer />
+        </Container>
+        <Footer />
+      </UserProvider>
     </BrowserRouter>
   );
 }

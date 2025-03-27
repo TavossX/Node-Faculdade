@@ -1,14 +1,14 @@
 import styles from "../../../Component/Form/Form.module.css";
 import { useState, useContext } from "react";
 import Input from "../../../Component/Form/Input.jsx";
+// import { Context } from "../../../context/UserContext.jsx";
 import register from "../../../hooks/useAuth.jsx";
-//import {Context} from "../../../Context/UserContext.jsx";
 function Register() {
   const [user, setUser] = useState({});
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(user);
-    Register(user);
+    //console.log(user);
+    register(user);
   }
   function handleChange(e) {
     setUser({ ...user, [e.target.name]: e.target.value });

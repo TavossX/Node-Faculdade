@@ -1,9 +1,6 @@
-//5//
-//8//import mongoose from 'mongoose'
-import mongoose from '../db/conn.js';
-////
-const {Schema}=mongoose;
-const userSchema=new Schema({
+import mongoose from "../db/conn.js";
+const {Schema}= mongoose;
+const userSchema = new Schema({
     name:{
         type:String,
         required:true,
@@ -14,7 +11,7 @@ const userSchema=new Schema({
         unique:true,
     },
     password:{
-        type:String,
+        type: String,
         required:true,
     },
     phone:{
@@ -22,6 +19,5 @@ const userSchema=new Schema({
         required:true,
     }
 });
-const User = mongoose.model('User.js', userSchema);
+const User = mongoose.model('User', userSchema);
 export default User;
-////
