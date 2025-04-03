@@ -1,5 +1,18 @@
-.home{
-padding: 50px; 
-text-align: 
-center;color:#8A2BE2;
+.home {
+  padding: 50px;
+  text-align: center;
+  color: #8a2be2;
+}
+
+.c-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.c-home_img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }

@@ -2,7 +2,7 @@ import { createContext } from "react";
 import useAuth from "../hooks/useAuth.jsx";
 const Context = createContext();
 function UserProvider({children}){
-    const {register} = useAuth();
-    return <Context.Provider value={{register}}>{children}</Context.Provider>
+    const {register, login, logout, authenticated} = useAuth();
+    return <Context.Provider value={{register, login, logout, authenticated}}>{children}</Context.Provider>
 }
 export {Context, UserProvider};

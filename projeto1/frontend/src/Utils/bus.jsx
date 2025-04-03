@@ -1,4 +1,5 @@
-import EventMitter from "events";
+import { EventEmitter } from 'events'; 
 
-const bus = new EventMitter();
-export default bus;
+const bus = new EventEmitter(); 
+
+export default bus; 
