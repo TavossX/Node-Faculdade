@@ -1,8 +1,9 @@
-import mongoose from "mongoose";
+import mongoose from "../db/conn.js";
 const { Schema } = mongoose;
+
 const petSchema = new Schema(
   {
-    name: {
+    nome: {
       type: String,
     },
     idade: {
@@ -25,7 +26,6 @@ const petSchema = new Schema(
     },
     genero: {
       type: String,
-      required: true,
     },
     porte: {
       type: String,
@@ -37,7 +37,6 @@ const petSchema = new Schema(
     },
     pontoReferencia: {
       type: String,
-      required: true,
     },
     data: {
       type: Date,
@@ -50,21 +49,25 @@ const petSchema = new Schema(
       type: Object,
       required: true,
     },
-    situcao: {
+    situacao: {
       type: String,
       required: true,
     },
-    imagem: {
+    imagens: {
       type: Array,
       required: true,
     },
     comentario: {
       type: String,
     },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
+
 const Pet = mongoose.model("Pet", petSchema);
 export default Pet;

@@ -6,13 +6,11 @@ const app = new express();
 //mensagem json
 app.use(express.json());
 //cors frontend
-app.use(
-  cors({
-    credentials: true,
-    origin: "http://localhost:3000",
-  })
-);
-
+app.use(cors({
+    credentials:true, origin:"http://localhost:3000"
+}))
+app.use(express.static('public'));
 app.use("/users", routes);
 app.use("/pets", routesPet);
+
 app.listen(5000);
